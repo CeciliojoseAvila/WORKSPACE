@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seudo Clases</title>
+
+    <style>
+    *{ /* EL * AQUI ES UN SELECTOR UNIVERSAL(APLICA A TODO EL CONTENIDO) */
+        box-sizing: border-box; /*para que el navegador ajuste al 100 todos los contenedores*/
+        font-family: sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+    .menu{
+        background-color: #13a4a4;
+        padding: 10px 0;
+    }   
+    .menu-nav{
+        list-style: none;
+        padding-left: 10px;
+    }
+    .menu-nav_items{
+        display: inline-block; /* HACE LISTA HORIZONTALES*/
+    }
+    .menu-nav_items a{
+        color: aqua;
+        text-decoration: none;
+
+    }
+    /* SEUDO CLASES*/
+    .menu-nav_items a:hover{ /* al pasar el puntero sobre el etems cambia de color*/
+        color: #8b6539;
+    }
+    .menu-nav_items a:active{ /* al seleccionar el items y ver contenido cambia de color*/
+        color: rgb(29, 29, 141);
+    }
+    /* SEUDO ELEMENTOS*/
+    .menu-nav_items a::after{
+        content: " | ";
+    }
+
+    /* MODELO DE CAJAS*/
+    main{
+        width: 100%;
+        height: 300px;
+        border: 10px solid gray;
+        padding: 20px 35px;
+    }
+    p{
+        text-align: justify;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-style: italic;
+        font-weight: bold;
+        text-indent: 20px;
+        line-height: 1.2;
+        word-spacing: 10px;
+        text-shadow: 4px 3px 2px rgba(0, 0, 0, 0.3);
+    }
+    a{
+        text-decoration: none;
+        text-transform: capitalize;
+    }
+    h1{
+        text-align: center;
+        color: aqua;
+    }
+
+    /*ELEMENTOS DE BLOQUE (coloca cada contenedor al lado del otro)*/ 
+    main, h1, p, div, li{
+        display: inline-block; 
+    }
+
+    /*BOTON*/
+    .div {
+        margin: 40px 0;
+    }
+
+    .btn{
+        background: #530d48;
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-style: none;
+    }
+    .btn:hover{
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    /*TAMAÑO BOTONES*/
+    .small{
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+    .mediun{
+        font-size: 14px;
+        padding: 15px 20px;
+    }
+    .big{
+        font-size: 18px;
+        padding: 25px 30px;
+    }
+    /*COLORES BOTONES*/
+    .azul{
+        background: hsl(240, 100%, 50%);
+    }
+    .verde{
+        background: rgb(22, 165, 30);
+    }
+    .naranja{
+        background: hwb(31 7% 2%);
+    }
+    .border-radius{
+        border-radius: 30px;
+    }
+    /*POSICIONAMIENTOS (CAJAS)*/
+    .caja{
+        background: #0e6ba8;
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+
+        float: right;
+    }
+    /*position: relative; absolute; fixed (dej una caja fija) */
+    .position{
+        background:  #5eb62c;
+        position: relative;
+        left: 150px;
+        top: 100px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul class="menu-nav">
+                <li class="menu-nav_items"><a href="">Inicio</a></li>
+                <li class="menu-nav_items"><a href="">Trabajo</a></li>
+                <li class="menu-nav_items"><a href="">Blog</a></li>
+                <li class="menu-nav_items"><a href="">Contacto</a></li>
+            
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h1>HOLA MUNDO, APRENDIENDO CSS</h1>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="">Laudantium vero nemo pariatur dignissimos tempora officiis</a>, vel repudiandae aliquid doloribus. Totam soluta facilis repudiandae autem harum labore aut quo cupiditate architecto?
+                </p>
+
+                <div> Totam soluta facilis repudiandae autem harum labore aut quo cupiditate architecto? </div>
+                
+                <a href=""> google !!!</a>
+            </div>
+            <ul>
+                <li>Items</li>
+                <li>Más Items</li>
+            </ul>
+        </section>
+    </main>
+ 
+    <div class="btn1">
+        <button class="btn">Boton estandar</button>
+    </div>
+
+    <div class="btn1">
+        <button class="btn small azul">Boton pequeño</button>
+        <button class="btn mediun verde">Boton mediano</button>
+        <button class="btn big naranja">Boton grande</button>
+    </div> <hr>
+
+    <div class="btn1">
+        <button class="btn small azul border-radius">Boton pequeño</button>
+        <button class="btn mediun verde border-radius">Boton mediano</button>
+        <button class="btn big naranja border-radius">Boton grande</button>
+    </div>
+
+    <h2>POSICIONAMIENTOS</h2>
+    <div class="caja"> </div>
+    <div class="caja position"> </div>
+    <div class="caja"> </div>
+    <div class="caja"> </div>
+    <div class="caja"> </div>
+    <div class="caja"> </div>
+    <div class="caja"> </div>
+
+</body>
+</html>

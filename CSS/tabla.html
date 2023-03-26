@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estilos para Tablas</title>
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      table {
+        border-collapse: collapse;
+        width: 500px;
+        text-align: center;
+      }
+      th,
+      td {
+        padding: 10px;
+      }
+      th {
+        background: #165ea1;
+        color: #fff;
+      }
+      tr:hover{
+        background: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table>
+      <tr>
+        <th>NOMBRE</th>
+        <th>EDAD</th>
+        <th>PAIS</th>
+      </tr>
+
+      <tr>
+        <th>CECILIO JOSE</th>
+        <th>35</th>
+        <th>COLOMBIA</th>
+      </tr>
+
+      <tr>
+        <th>CARLOS MARIO</th>
+        <th>45</th>
+        <th>ARGENTINA</th>
+      </tr>
+    </table>
+  </body>
+</html>
